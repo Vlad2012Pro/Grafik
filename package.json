@@ -1,0 +1,25 @@
+{
+  "name": "grafik-rprail",
+  "version": "1.0.0",
+  "description": "График нарядов RPRail",
+  "main": "main.js",
+  "author": "RPRail",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "ru.tdtunion.grafik",
+    "productName": "Grafik RPRail",
+    "files": ["main.js", "index.html"],
+    "directories": { "output": "dist" },
+    "win": { "target": "portable" },
+    "portable": { "artifactName": "Grafik-RPRail.exe" }
+  }
+}
